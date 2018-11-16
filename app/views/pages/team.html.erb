@@ -1,4 +1,53 @@
-<h1>Team Page</h1>
+<style>
+.container{
+ margin-top:200px;
+ margin-left:80px;
+}
+body{
+background: #1782ed;
+
+}
+
+h1{
+font-family:'Fredoka One', cursive;
+color:#1782ed;
+font-size: 70px;
+
+}
+h2{
+font-family:'Fredoka One', cursive;
+color:#1782ed;
+font-size: 40px;
+
+}
+
+.btn-dark{
+ margin-top:5px;
+
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%= render "dogs/nav"%>
 <% if logged_in? %>
-  <p>Only logged in dogs can see this</p>
+<div class="container">
+<div class="jumbotron">
+  <h2><img src="https://image.flaticon.com/icons/svg/194/194177.svg"width="200" height="200">  Hola estamos el team, si quieres comunicarte con nosotros dale clik en soporte!</h2>
+
+
+
+
+</div>
+</div>
 <% end %>

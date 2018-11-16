@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/', to: 'dogs#index'
+    get '/', to: 'dogs#index'
 
     # auth routes
     get  '/signup',  to: 'dogs#new', as: 'signup'

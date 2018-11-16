@@ -1,5 +1,30 @@
-<h1>Home Page</h1>
+<style>
+  body{
+   background: #1782ed;
 
-<% if logged_in? %>
-  <p>Only logged in dogs can see this</p>
-<% end %>
+  }
+
+
+
+h1{
+color: white;
+text-align: center;
+font-size: 100px;
+font-family:'Fredoka One', cursive;
+}
+
+.container{
+margin-top:100px;
+
+}
+#boton{
+
+margin:auto;
+
+}
+</style>
+
+<div class="container">
+  <h1><img src="https://image.flaticon.com/icons/svg/194/194177.svg"width="200" height="200"> Bienvenido a Facedog <%= link_to "Log in!", login_path, class: "btn btn-dark btn-lg" ,id:'boton'%></h1>
+
+</div>

@@ -1,11 +1,62 @@
+
+
+<style>
+  body{
+   background: #1782ed;
+
+  }
+
+h2{
+text-align: center;
+font-size: 50px;
+color:#1782ed;
+font-family:'Fredoka One', cursive;
+}
+
+h1{
+color: white;
+text-align: center;
+font-size: 100px;
+font-family:'Fredoka One', cursive;
+}
+.container{
+margin-top:150px;
+
+}
+
+.boton{
+ margin: auto;
+}
+</style>
 <% if logged_in? %>
-  <h1>Congratulations you are logged in! Logged in users can see password hashes. And see our secret team, home and about page!</h1>
-  <%= link_to "Log out", logout_path, method: :delete %>
-  <% @dogs.each do |user| %>
-    <li>Hey I am <%= dog.name %> and you can see my password hash!</li>
-    <li><%= dog.password_digest %></li>
-  <% end %>
-<% else %>
-  <h1>You should log in to see the password hashes!</h1>
-  <%= link_to "Log in!", login_path %>
-<% end %>
+
+<%= render "dogs/nav"%>
+<h1>Bienvenido a Facedog</h1>
+
+<div class="container" id="bienvenido">
+        <div class="card-deck col-12">
+            <%@dogs.each do |dog|%>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="dog.image_url" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title"><h5>Dog</h5>
+                            <p class="card-text"> <h5>Name:<%= dog.name%></h5></p>
+                                <p class="card-text"> <h5>Email:<%= dog.email%></h5></p>
+
+                        </div>
+                </div>
+            <% end %>
+        </div>
+
+    </div>
+    <% else %>
+    <div class="container">
+    <div class="jumbotron">
+      <h2><img src="https://image.flaticon.com/icons/svg/194/194177.svg"width="200" height="200">  Estas fuera de Facedog si deseas entrar, logeate!</h2>
+<div class="boton">
+  <%= link_to "Log in!", login_path, class: "btn btn-dark btn-lg"%>
+</div>
+
+    </div>
+    </div>
+   <% end %>

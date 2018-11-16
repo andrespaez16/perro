@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   def team
   end
 
+ private
   def logged_in_dog
     unless logged_in?
       redirect_to '/'

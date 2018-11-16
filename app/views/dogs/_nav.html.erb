@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="#"><img src="https://image.flaticon.com/icons/svg/194/194177.svg"  width="30" height="30">Facedog</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="https://www.facebook.com/">Soporte</a>
+      <a class="nav-item nav-link" href="/about">about</a>
+      <a class="nav-item nav-link" href="/team">team</a>
+      <%= link_to "Log out", logout_path, class: "btn btn-dark btn-md", method: :delete %>
+    </div>
+  </div>
+</nav>
